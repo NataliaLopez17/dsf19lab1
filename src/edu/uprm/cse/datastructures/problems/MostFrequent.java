@@ -20,12 +20,12 @@ public class MostFrequent {
 		B1.add(2);
 
 		
-		Bag<Integer> B2 = B1.moreFrequentThan(1);
+		Bag<Integer> B2 = B1.mostFrequentThan(1);
 		System.out.println("B1.moreFrequentThan(1): ");
 		for (Object e : B2.toArray()) {
 			System.out.println(e);
 		}
-		B2 = B1.moreFrequentThan(3);
+		B2 = B1.mostFrequentThan(3);
 		System.out.println("\nB1.moreFrequentThan(3): ");
 		for (Object e : B2.toArray()) {
 			System.out.println(e);

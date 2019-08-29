@@ -7,7 +7,22 @@ import edu.uprm.cse.datastructures.set.Set;
 
 public class Disjoint {
 	
-	// ADD YOUR CODE HERE
+private static boolean checkDisjoint(Object[] sets) {
+		
+		for(int i=0; i<sets.length; i++) {
+			Set<Integer> target = (Set<Integer>) sets[i];
+			
+			for(int j=i+1; j<sets.length; j++) {
+				Set<Integer> temp = (Set<Integer>) sets[j];
+				
+				if(!target.intersection(temp).isEmpty())
+					return false;
+				
+			}
+		}
+		return true;
+	}
+
 	
 	public static void main(String[] args) {
 		Set<Integer> S1 = new  ArraySet<Integer>();

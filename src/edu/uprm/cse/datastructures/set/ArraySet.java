@@ -137,5 +137,24 @@ public class ArraySet<E> implements Set<E> {
 		return result;
 
 	}
+	
+	@Override
+	public Object[] singletonSets() {
+		
+		Object[] result = new Object[this.size()];
+		
+		for(int i = 0; i<this.size(); i++) {
+			
+			Set<E> temp = new ArraySet<E>(1);
+			temp.add(this.elements[i]);
+			
+			result[i] = temp;
+			
+		}
+		
+		return result;
+		
+	}
+
 
 }

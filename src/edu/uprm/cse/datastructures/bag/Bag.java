@@ -19,5 +19,7 @@ public interface Bag<E> {
     
     public E[] toArray();
     
+    Bag<E> mostFrequentThan(E e);
+    
       
 }

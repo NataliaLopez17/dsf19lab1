@@ -22,5 +22,7 @@ public interface Set<E> {
     public Set<E> intersection(Set<E> S);
 
     public E[] toArray();
+
+	public Object[] singletonSets();
     
 }

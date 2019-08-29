@@ -109,5 +109,21 @@ public class DynamicBag<E> implements Bag<E>{
 		
 		return result;
 	}
+	
+	@Override
+	public Bag<E> mostFrequentThan(E e) {
+		Bag<E> result = new DynamicBag<E>(this.size());
+		int counter=this.count(e);
+		for(int i = 0; i<this.size(); i++) {
+			if(this.count(this.elements[i])>counter) {
+				if(!result.isMember(this.elements[i])) {
+					result.add(this.elements[i]);
+				}
+			}
+
+		}
+		return result;
+	}
+
 
 }
